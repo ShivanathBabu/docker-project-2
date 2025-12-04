@@ -1,17 +1,17 @@
 networks:
-defaults:
-driver: bridge
-name: roboshop
-external: true  # already existing network
+  defaults:
+    driver: bridge
+    name: roboshop
+    external: true  # already existing network
 services:
-mongodb:
-  image: shivanathbabu/mongodb:v1
-  container_name: mongodb
-catalogue:
-  image: shivanathbabu/catalogue:v1
-  container_name: catalogue
-  depends_on:
-  - mongodb
+  mongodb:
+    image: shivanathbabu/mongodb:v1
+    container_name: mongodb
+  catalogue:
+    image: shivanathbabu/catalogue:v1
+    container_name: catalogue
+    depends_on:
+    - mongodb
   redis:
     image: redis:7.0
     container_name: redis
