@@ -59,7 +59,7 @@ services:
     - cart
     - user
   frontend:
-    image: shivanathbabu/frontned:v1
+    image: shivanathbabu/frontend:v1
     container_name: frontend
     ports:
     - "80:80"
