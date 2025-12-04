@@ -3,6 +3,7 @@ networks:
     driver: bridge
     name: roboshop
     external: true  # already existing network
+    
 services:
   mongodb:
     image: shivanathbabu/mongodb:v1
