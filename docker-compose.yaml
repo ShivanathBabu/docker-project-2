@@ -58,4 +58,16 @@ services:
     - rabbitmq
     - cart
     - user
+  frontend:
+    image: shivanathbabu/frontned:v1
+    container_name: frontend
+    depends_on:
+    ports:
+    - "80:80"
+    depends_on:
+    - catalogue
+    - user
+    - cart
+    - shipping
+    - payment
  
